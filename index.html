@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de Início · Personal Lucas Lima</title>
+<meta name="description" content="Ficha de início para alunos do treino presencial com o personal trainer Lucas Lima em Monção.">
+
+<!-- Pixel Performix -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '264800457918824');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=264800457918824&ev=PageView&noscript=1"/></noscript>
+
+<style>
+  :root{
+    --bg:#0c0a1a;
+    --bg2:#13102a;
+    --card:#181433;
+    --card-soft:#1f1a40;
+    --line:#2c2658;
+    --roxo:#7c3aed;
+    --roxo-claro:#a78bfa;
+    --roxo-vivo:#8b5cf6;
+    --texto:#ece9ff;
+    --suave:#b8b2dd;
+    --apagado:#7d77a3;
+    --ok:#34d399;
+    --erro:#fb7185;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:
+      radial-gradient(1100px 600px at 80% -10%, rgba(124,58,237,.22), transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, rgba(99,102,241,.16), transparent 55%),
+      var(--bg);
+    color:var(--texto);
+    line-height:1.55;
+    padding:0 0 80px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+
+  /* Cabeçalho */
+  header{
+    text-align:center;
+    padding:48px 18px 30px;
+  }
+  .selo{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--roxo-claro);font-weight:700;
+    border:1px solid var(--line);border-radius:999px;
+    padding:7px 16px;background:rgba(124,58,237,.08);
+  }
+  .selo b{width:7px;height:7px;border-radius:50%;background:var(--roxo-vivo);box-shadow:0 0 10px var(--roxo-vivo)}
+  header h1{
+    font-size:clamp(26px,6vw,40px);line-height:1.12;
+    margin:18px 0 10px;font-weight:800;letter-spacing:-.02em;
+  }
+  header h1 span{
+    background:linear-gradient(100deg,var(--roxo-claro),var(--roxo-vivo));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  header p{color:var(--suave);font-size:16px;max-width:520px;margin:0 auto}
+
+  /* Barra de progresso de preenchimento */
+  .progresso-fixo{
+    position:sticky;top:0;z-index:20;
+    background:linear-gradient(180deg,var(--bg) 60%,transparent);
+    padding:10px 18px 14px;
+    backdrop-filter:blur(6px);
+  }
+  .progresso-fixo .barra{
+    max-width:760px;margin:0 auto;height:8px;border-radius:999px;
+    background:var(--card-soft);overflow:hidden;border:1px solid var(--line);
+  }
+  .progresso-fixo .barra i{
+    display:block;height:100%;width:0%;
+    background:linear-gradient(90deg,var(--roxo),var(--roxo-claro));
+    transition:width .4s ease;
+  }
+  .progresso-fixo .legenda{
+    max-width:760px;margin:6px auto 0;font-size:12px;color:var(--apagado);
+    display:flex;justify-content:space-between;
+  }
+
+  /* Seções */
+  section.bloco{
+    background:linear-gradient(180deg,var(--card),var(--bg2));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 20px;
+    margin:18px 0;
+  }
+  .bloco-cab{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .bloco-num{
+    flex:0 0 auto;width:38px;height:38px;border-radius:12px;
+    display:grid;place-items:center;font-weight:800;font-size:16px;
+    background:rgba(124,58,237,.16);color:var(--roxo-claro);
+    border:1px solid var(--line);
+  }
+  .bloco-cab h2{font-size:19px;font-weight:800;letter-spacing:-.01em}
+  .bloco-desc{color:var(--apagado);font-size:13.5px;margin:0 0 18px 52px}
+  @media(max-width:520px){.bloco-desc{margin-left:0}}
+
+  .campo{margin-bottom:16px}
+  .campo:last-child{margin-bottom:0}
+  label.q{display:block;font-size:14.5px;font-weight:600;margin-bottom:7px;color:var(--texto)}
+  label.q em{color:var(--apagado);font-weight:500;font-style:normal;font-size:13px}
+  .obrig{color:var(--roxo-claro)}
+
+  input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number],select,textarea{
+    width:100%;background:var(--card-soft);border:1px solid var(--line);
+    color:var(--texto);border-radius:12px;padding:12px 14px;font-size:15px;
+    font-family:inherit;transition:border-color .2s,box-shadow .2s;
+  }
+  textarea{resize:vertical;min-height:72px}
+  input:focus,select:focus,textarea:focus{
+    outline:none;border-color:var(--roxo-vivo);
+    box-shadow:0 0 0 3px rgba(124,58,237,.22);
+  }
+  input::placeholder,textarea::placeholder{color:var(--apagado)}
+  select{appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23a78bfa' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;}
+
+  .dois{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.dois{grid-template-columns:1fr}}
+
+  /* Pílulas de múltipla escolha */
+  .pilulas{display:flex;flex-wrap:wrap;gap:9px}
+  .pilulas label{
+    cursor:pointer;user-select:none;
+    border:1px solid var(--line);border-radius:999px;
+    padding:9px 15px;font-size:14px;color:var(--suave);
+    background:var(--card-soft);transition:all .15s;
+  }
+  .pilulas input{position:absolute;opacity:0;width:0;height:0}
+  .pilulas label:has(input:checked){
+    background:rgba(124,58,237,.22);border-color:var(--roxo-vivo);
+    color:#fff;box-shadow:0 0 0 1px var(--roxo-vivo) inset;
+  }
+  .pilulas label:active{transform:scale(.97)}
+
+  /* Termo */
+  .termo-item{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:13px 14px;border:1px solid var(--line);border-radius:12px;
+    background:var(--card-soft);margin-bottom:10px;cursor:pointer;
+  }
+  .termo-item input{margin-top:3px;width:18px;height:18px;accent-color:var(--roxo-vivo);flex:0 0 auto}
+  .termo-item span{font-size:13.7px;color:var(--suave)}
+  .termo-item span b{color:var(--texto)}
+
+  /* Erro */
+  .erro-msg{color:var(--erro);font-size:13px;margin-top:6px;display:none}
+  .campo.invalido input,.campo.invalido select,.campo.invalido textarea{border-color:var(--erro)}
+  .campo.invalido .erro-msg{display:block}
+
+  /* Ações */
+  .acoes{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+  .btn{
+    border:none;cursor:pointer;font-family:inherit;font-weight:800;
+    border-radius:14px;padding:16px;font-size:16.5px;width:100%;
+    transition:transform .12s,filter .2s,box-shadow .2s;
+  }
+  .btn-enviar{
+    background:linear-gradient(100deg,var(--roxo),var(--roxo-vivo));
+    color:#fff;box-shadow:0 12px 30px -10px rgba(124,58,237,.7);
+  }
+  .btn-enviar:hover{filter:brightness(1.08)}
+  .btn-enviar:active{transform:translateY(1px)}
+  .btn-print{
+    background:transparent;color:var(--suave);border:1px solid var(--line);font-size:14.5px;padding:13px;
+  }
+  .btn-print:hover{color:var(--texto);border-color:var(--roxo-claro)}
+  .aviso{font-size:12.5px;color:var(--apagado);text-align:center;margin-top:4px}
+
+  footer{text-align:center;color:var(--apagado);font-size:12.5px;margin-top:34px;line-height:1.7}
+  footer b{color:var(--roxo-claro)}
+
+  /* Botão do app */
+  .btn-app{
+    display:block;text-align:center;text-decoration:none;
+    background:rgba(124,58,237,.16);border:1px solid var(--roxo-vivo);
+    color:#fff;font-weight:800;font-size:16px;border-radius:14px;padding:15px;
+    transition:filter .2s,background .2s;
+  }
+  .btn-app:hover{background:rgba(124,58,237,.28)}
+
+  /* Fotos de molde */
+  .fotos-titulo{font-size:14px;font-weight:700;color:var(--texto);margin:18px 0 8px}
+  .foto-poses{margin:0}
+  .foto-poses img{width:100%;display:block;border-radius:12px;border:1px solid var(--line)}
+  .dicas-fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .dicas-fotos figure{margin:0;text-align:center}
+  .dicas-fotos img{width:100%;display:block;border-radius:10px;border:1px solid var(--line)}
+  .dicas-fotos figcaption{margin-top:5px;font-size:12px;font-weight:600;color:var(--suave)}
+  @media(max-width:420px){.dicas-fotos{grid-template-columns:repeat(2,1fr)}}
+
+  /* Combinado travado */
+  .combinado-fixo{
+    border:1px solid var(--line);border-radius:14px;background:var(--card-soft);
+    overflow:hidden;
+  }
+  .cf-cab{
+    display:flex;align-items:center;gap:8px;
+    background:rgba(124,58,237,.14);color:var(--roxo-claro);
+    font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    padding:10px 14px;border-bottom:1px solid var(--line);
+  }
+  .cf-row{
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+    padding:11px 14px;border-bottom:1px solid var(--line);
+  }
+  .cf-row:last-child{border-bottom:none}
+  .cf-row span{font-size:13px;color:var(--apagado);flex:0 0 auto}
+  .cf-row b{font-size:14px;color:var(--texto);text-align:right}
+  .cf-destaque{background:rgba(124,58,237,.1)}
+  .cf-destaque b{color:#fff;font-size:15.5px}
+
+  /* Botão guardar combinado */
+  .btn-guardar{
+    margin-top:14px;width:100%;cursor:pointer;font-family:inherit;font-weight:700;
+    border:1px solid var(--roxo-vivo);background:transparent;color:var(--roxo-claro);
+    border-radius:12px;padding:13px;font-size:14.5px;transition:background .2s,color .2s;
+  }
+  .btn-guardar:hover{background:rgba(124,58,237,.16);color:#fff}
+  .btn-guardar.ok{background:var(--ok);border-color:var(--ok);color:#06281d}
+  .guardar-dica{font-size:12px;color:var(--apagado);text-align:center;margin-top:7px}
+
+  /* Caixa MB Way */
+  .mbway{
+    margin-top:18px;border:1px solid var(--roxo-vivo);border-radius:14px;
+    background:linear-gradient(180deg,rgba(124,58,237,.16),rgba(124,58,237,.05));
+    padding:16px;
+  }
+  .mbway-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .mbway-badge{
+    background:#fff;color:#5b21b6;font-weight:900;font-size:12px;letter-spacing:.06em;
+    padding:5px 9px;border-radius:7px;
+  }
+  .mbway-top span:last-child{font-weight:700;font-size:14.5px;color:var(--texto)}
+  .mbway-txt{font-size:13.7px;color:var(--suave);margin-bottom:12px}
+  .mbway-num{
+    display:flex;align-items:center;gap:10px;
+    background:var(--card-soft);border:1px solid var(--line);border-radius:12px;
+    padding:10px 12px;
+  }
+  .mbway-num span{font-size:21px;font-weight:800;letter-spacing:.04em;flex:1;color:#fff}
+  .mbway-num button{
+    border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:13.5px;
+    background:var(--roxo-vivo);color:#fff;border-radius:9px;padding:9px 14px;transition:filter .2s;
+  }
+  .mbway-num button:hover{filter:brightness(1.1)}
+  .mbway-num button.copiado{background:var(--ok)}
+  .mbway-dica{font-size:12.5px;color:var(--apagado);margin-top:10px;line-height:1.5}
+
+  /* Impressão */
+  @media print{
+    body{background:#fff;color:#111}
+    .progresso-fixo,.acoes,.selo,footer{display:none}
+    section.bloco{border:1px solid #ccc;background:#fff;break-inside:avoid;page-break-inside:avoid}
+    header h1 span{color:#111;-webkit-text-fill-color:#111}
+    .bloco-num{background:#eee;color:#333}
+    input,select,textarea{border:1px solid #999;color:#111}
+    .pilulas label:has(input:checked){background:#eee;color:#111}
+  }
+</style>
+</head>
+<body>
+
+<div class="progresso-fixo">
+  <div class="barra"><i id="barra"></i></div>
+  <div class="legenda"><span>Preenchimento</span><span id="pct">0%</span></div>
+</div>
+
+<header>
+  <span class="selo"><b></b>Treino presencial · Monção</span>
+  <h1>Ficha de início do <span>seu treino</span></h1>
+  <p>Leva uns 3 minutos. É o que eu uso pra montar o seu plano com segurança e do jeito que o seu corpo precisa. Quanto mais real, melhor.</p>
+</header>
+
+<main class="wrap">
+<form id="ficha" novalidate>
+
+  <!-- 1. CADASTRO -->
+  <section class="bloco">
+    <div class="bloco-cab"><div class="bloco-num">1</div><h2>Quem é você</h2></div>
+    <p class="bloco-desc">O básico pra eu te identificar e entrar em contato.</p>
+
+    <div class="campo">
+      <label class="q" for="nome">Nome completo <span class="obrig">*</span></label>
+      <input type="text" id="nome" data-q="Nome" placeholder="Seu nome e sobrenome" autocomplete="name">
+      <div class="erro-msg">Me diz o seu nome.</div>
+    </div>
+
+    <div class="dois">
+      <div class="campo">
+        <label class="q" for="tel">Telefone / WhatsApp <span class="obrig">*</span></label>
+        <input type="tel" id="tel" data-q="Telefone" placeholder="(+351) 9..." autocomplete="tel">
+        <div class="erro-msg">Preciso de um contato.</div>
+      </div>
+      <div class="campo">
+        <label class="q" for="nasc">Data de nascimento</label>
+        <input type="date" id="nasc" data-q="Nascimento">
+      </div>
+    </div>
+
+    <div class="dois">
+      <div class="campo">
+        <label class="q" for="email">E-mail</label>
+        <input type="email" id="email" data-q="E-mail" placeholder="seuemail@exemplo.com" autocomplete="email">
+      </div>
+      <div class="campo">
+        <label class="q" for="cidade">Cidade / onde mora</label>
+        <input type="text" id="cidade" data-q="Cidade" placeholder="Ex.: Monção">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label class="q">Como você me conheceu?</label>
+      <div class="pilulas" data-q="Como conheceu">
+        <label><input type="radio" name="origem" value="Instagram">Instagram</label>
+        <label><input type="radio" name="origem" value="Indicação">Indicação de alguém</label>
+        <label><input type="radio" name="origem" value="Google">Google / pesquisa</label>
+        <label><input type="radio" name="origem" value="Passei na rua">Passei na rua</label>
+        <label><input type="radio" name="origem" value="Outro">Outro</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SAÚDE -->
+  <section class="bloco">
+    <div class="bloco-cab"><div class="bloco-num">2</div><h2>Sua saúde</h2></div>
+    <p class="bloco-desc">Isso fica entre nós e serve pra eu treinar você com segurança. Nada de errado em marcar tudo.</p>
+
+    <div class="campo">
+      <label class="q">Sente dor em alguma região hoje? <em>(pode marcar mais de uma)</em></label>
+      <div class="pilulas" data-q="Dores">
+        <label><input type="checkbox" name="dor" value="Coluna / lombar">Coluna / lombar</label>
+        <label><input type="checkbox" name="dor" value="Joelho">Joelho</label>
+        <label><input type="checkbox" name="dor" value="Ombro">Ombro</label>
+        <label><input type="checkbox" name="dor" value="Quadril">Quadril</label>
+        <label><input type="checkbox" name="dor" value="Pescoço">Pescoço</label>
+        <label><input type="checkbox" name="dor" value="Nenhuma">Nenhuma dor</label>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label class="q" for="lesao">Já teve alguma lesão ou cirurgia? Qual e quando?</label>
+      <textarea id="lesao" data-q="Lesão / cirurgia" placeholder="Ex.: hérnia de disco em 2022, cirurgia no joelho direito..."></textarea>
+    </div>
+
+    <div class="campo">
+      <label class="q">Tem alguma condição de saúde diagnosticada?</label>
+      <div class="pilulas" data-q="Condições">
+        <label><input type="checkbox" name="cond" value="Hipertensão">Hipertensão</label>
+        <label><input type="checkbox" name="cond" value="Diabetes">Diabetes</label>
+        <label><input type="checkbox" name="cond" value="Cardíaco">Coração</label>
+        <label><input type="checkbox" name="cond" value="Respiratório / asma">Respiratório</label>
+        <label><input type="checkbox" name="cond" value="Tireoide">Tireoide</label>
+        <label><input type="checkbox" name="cond" value="Nenhuma">Nenhuma</label>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label class="q" for="medic">Usa algum medicamento contínuo?</label>
+      <input type="text" id="medic" data-q="Medicamentos" placeholder="Qual? Se não usa, deixe em branco.">
+    </div>
+
+    <div class="dois">
+      <div class="campo">
+        <label class="q" for="liberacao">Tem liberação médica pra atividade física?</label>
+        <select id="liberacao" data-q="Liberação médica">
+          <option value="">Selecione</option>
+          <option>Sim, tenho</option>
+          <option>Não tenho ainda</option>
+          <option>Não sei se preciso</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label class="q" for="gestante">Está grávida ou no pós-parto?</label>
+        <select id="gestante" data-q="Gestante / pós-parto">
+          <option value="">Selecione</option>
+          <option>Não</option>
+          <option>Grávida</option>
+          <option>Pós-parto (até 6 meses)</option>
+          <option>Não se aplica</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label class="q" for="obs-saude">Mais alguma coisa de saúde que eu deva saber?</label>
+      <textarea id="obs-saude" data-q="Observações de saúde" placeholder="Sono ruim, ansiedade, alergias, o que quiser contar..."></textarea>
+    </div>
+  </section>
+
+  <!-- 3. OBJETIVOS -->
+  <section class="bloco">
+    <div class="bloco-cab"><div class="bloco-num">3</div><h2>Seu objetivo e sua rotina</h2></div>
+    <p class="bloco-desc">Aqui você me diz onde quer chegar e quanto tempo a vida deixa pra isso.</p>
+
+    <div class="campo">
+      <label class="q" for="objetivo">Qual é o seu objetivo principal? <span class="obrig">*</span></label>
+      <select id="objetivo" data-q="Objetivo">
+        <option value="">Selecione</option>
+        <option>Emagrecer / secar</option>
+        <option>Ganhar músculo / definir</option>
+        <option>Tirar uma dor / melhorar postura</option>
+        <option>Glúteo e pernas</option>
+        <option>Condicionamento e disposição</option>
+        <option>Saúde geral e qualidade de vida</option>
+      </select>
+      <div class="erro-msg">Escolhe o seu objetivo principal.</div>
+    </div>
+
+    <div class="campo">
+      <label class="q" for="meta">Conta com suas palavras: o que você quer conquistar?</label>
+      <textarea id="meta" data-q="Meta detalhada" placeholder="Ex.: voltar a subir escada sem dor, perder 8kg até o verão, ficar mais forte..."></textarea>
+    </div>
+
+    <div class="campo">
+      <label class="q">Quais dias você consegue treinar? <em>(marque os possíveis)</em></label>
+      <div class="pilulas" data-q="Dias disponíveis">
+        <label><input type="checkbox" name="dias" value="Seg">Seg</label>
+        <label><input type="checkbox" name="dias" value="Ter">Ter</label>
+        <label><input type="checkbox" name="dias" value="Qua">Qua</label>
+        <label><input type="checkbox" name="dias" value="Qui">Qui</label>
+        <label><input type="checkbox" name="dias" value="Sex">Sex</label>
+        <label><input type="checkbox" name="dias" value="Sáb">Sáb</label>
+        <label><input type="checkbox" name="dias" value="Dom">Dom</label>
+      </div>
+    </div>
+
+    <div class="dois">
+      <div class="campo">
+        <label class="q" for="horario">Melhor horário pra você</label>
+        <select id="horario" data-q="Horário">
+          <option value="">Selecione</option>
+          <option>Manhã cedo</option>
+          <option>Meio da manhã</option>
+          <option>Hora do almoço</option>
+          <option>Tarde</option>
+          <option>Fim de tarde / noite</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label class="q" for="experiencia">Já treinou antes?</label>
+        <select id="experiencia" data-q="Experiência">
+          <option value="">Selecione</option>
+          <option>Nunca treinei</option>
+          <option>Já treinei, mas faz tempo</option>
+          <option>Treino de vez em quando</option>
+          <option>Treino com frequência</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label class="q" for="tentou">O que você já tentou e não funcionou?</label>
+      <input type="text" id="tentou" data-q="Já tentou" placeholder="Ex.: app sozinho, academia sem orientação, dieta restritiva...">
+    </div>
+  </section>
+
+  <!-- 4. COMBINADO -->
+  <section class="bloco">
+    <div class="bloco-cab"><div class="bloco-num">4</div><h2>Nosso combinado</h2></div>
+    <p class="bloco-desc">Os valores que a gente combinou. Confira e dê o aceite no final.</p>
+
+    <div class="combinado-fixo">
+      <div class="cf-cab">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Combinado fechado
+      </div>
+      <div class="cf-row" data-q="Plano"><span>Plano</span><b>70€ por 10 aulas · semana sim, semana não</b></div>
+      <div class="cf-row" data-q="Este mês"><span>Este mês</span><b>29/06 a 05/07 e 13/07 a 16/07</b></div>
+      <div class="cf-row" data-q="Dias e horário"><span>Dias e horário</span><b>Segunda a sexta, às 18h</b></div>
+      <div class="cf-row" data-q="Duração"><span>Duração</span><b>Entre 40 e 60 min por treino</b></div>
+      <div class="cf-row cf-destaque" data-q="A pagar agora"><span>A pagar agora</span><b>56€ (proporcional deste mês)</b></div>
+    </div>
+
+    <!-- Caixa MB Way -->
+    <div class="mbway">
+      <div class="mbway-top">
+        <span class="mbway-badge">MB WAY</span>
+        <span>Garanta o seu lugar agora</span>
+      </div>
+      <p class="mbway-txt">Pagamento deste mês (proporcional): <b>56€</b>. O pagamento é antecipado, envie pelo MB Way pra confirmar a sua vaga.</p>
+      <div class="mbway-num">
+        <span id="mbnum">960 259 288</span>
+        <button type="button" id="copiar">Copiar</button>
+      </div>
+      <p class="mbway-dica">Abra o app MB Way, toque em “Enviar dinheiro”, coloque este número e o valor <b>56€</b>. No nome vai aparecer <b>Lucas Lima</b>.</p>
+    </div>
+
+    <button type="button" id="guardar-combinado" class="btn-guardar">Guardar o meu combinado</button>
+    <p class="guardar-dica">Copia tudo isto pra você colar nas suas notas ou mandar pra si mesma, e não esquecer.</p>
+
+    <p class="bloco-desc" style="margin:18px 0 10px 0">Lê e marca cada ponto pra gente começar com tudo certo:</p>
+
+    <label class="termo-item">
+      <input type="checkbox" id="t1" data-termo="Pagamento antecipado">
+      <span><b>Pagamento antecipado.</b> Entendo que pago o plano antes e uso os treinos depois, e que a sessão avulsa só fica marcada após o pagamento.</span>
+    </label>
+
+    <label class="termo-item">
+      <input type="checkbox" id="t2" data-termo="Desmarcação 24h">
+      <span><b>Desmarcação.</b> Pra remarcar sem perder o treino, aviso com no mínimo <b>24 horas</b> de antecedência. Sem aviso nesse prazo, a sessão é considerada dada.</span>
+    </label>
+
+    <label class="termo-item">
+      <input type="checkbox" id="t3" data-termo="Atraso / tolerância">
+      <span><b>Atraso.</b> Chego no horário combinado. A tolerância é de <b>15 minutos</b> e o tempo de atraso não estende a duração do treino.</span>
+    </label>
+
+    <label class="termo-item">
+      <input type="checkbox" id="t4" data-termo="Compromisso, saúde e risco">
+      <span><b>Compromisso e saúde.</b> Sigo a frequência e as orientações do treino, respondi tudo de forma verdadeira, vou avisar qualquer mudança na minha saúde e entendo que toda atividade física tem riscos.</span>
+    </label>
+
+    <label class="termo-item">
+      <input type="checkbox" id="timg" data-q="Autoriza imagem">
+      <span><b>Uso de imagem.</b> Autorizo o uso de fotos e vídeos do meu treino para acompanhamento e divulgação. <em style="color:var(--apagado)">(opcional)</em></span>
+    </label>
+
+    <div class="campo" style="margin-top:16px">
+      <label class="q" for="assina">Confirme escrevendo seu nome <span class="obrig">*</span></label>
+      <input type="text" id="assina" data-q="Assinatura (nome)" placeholder="Digite seu nome completo como assinatura">
+      <div class="erro-msg">Escreva seu nome pra confirmar.</div>
+    </div>
+  </section>
+
+  <!-- 5. APP DE TREINO -->
+  <section class="bloco">
+    <div class="bloco-cab"><div class="bloco-num">5</div><h2>App de treino</h2></div>
+    <p class="bloco-desc">Pros dias em que você treina sozinha, sem mim por perto. É onde fica o seu treino montado, com o vídeo de cada exercício pra você não errar.</p>
+
+    <a class="btn-app" href="https://client.mfitpersonal.com.br/out/signup-link/Mzg1MjI=" target="_blank" rel="noopener">
+      Criar meu cadastro no app
+    </a>
+
+    <label class="termo-item" style="margin-top:14px">
+      <input type="checkbox" id="appok" data-q="Cadastro no app">
+      <span><b>Pronto, já criei meu cadastro.</b> Baixei o app e fiz o registro pelo link.</span>
+    </label>
+  </section>
+
+  <!-- 6. FOTOS -->
+  <section class="bloco">
+    <div class="bloco-cab"><div class="bloco-num">6</div><h2>Fotos de antes</h2></div>
+    <p class="bloco-desc">Igual à avaliação inicial da consultoria. Servem só pra gente comparar a sua evolução depois, e ficam só comigo. De roupa de treino justa e num lugar com luz boa.</p>
+
+    <p class="fotos-titulo">As 3 poses (tire uma de cada)</p>
+    <figure class="foto-poses">
+      <img src="fotos/poses.png" alt="As três poses: frente, lado e costas" loading="lazy">
+    </figure>
+
+    <p class="fotos-titulo">Pra foto ficar boa</p>
+    <div class="dicas-fotos">
+      <figure><img src="fotos/luz.png" alt="Exemplo de iluminação" loading="lazy"><figcaption>Luz boa, sem sombra</figcaption></figure>
+      <figure><img src="fotos/distancia.png" alt="Exemplo de distância" loading="lazy"><figcaption>Corpo todo na foto</figcaption></figure>
+      <figure><img src="fotos/fundo.png" alt="Exemplo de fundo" loading="lazy"><figcaption>Fundo limpo</figcaption></figure>
+      <figure><img src="fotos/roupa.png" alt="Exemplo de roupa" loading="lazy"><figcaption>Roupa justa</figcaption></figure>
+      <figure><img src="fotos/bracos.png" alt="Exemplo de braços" loading="lazy"><figcaption>Braços soltos</figcaption></figure>
+    </div>
+
+    <label class="termo-item" style="margin-top:18px">
+      <input type="checkbox" id="fotosok" data-q="Fotos de avaliação">
+      <span><b>Vou enviar as fotos</b> (frente, lado e costas) aqui no WhatsApp, junto com a ficha.</span>
+    </label>
+  </section>
+
+  <div class="acoes">
+    <button type="submit" class="btn btn-enviar">Enviar minha ficha pro Lucas</button>
+    <button type="button" class="btn btn-print" id="imprimir">Salvar / imprimir em PDF</button>
+    <p class="aviso">Ao enviar, abre o WhatsApp com a sua ficha já escrita. É só apertar enviar lá.</p>
+  </div>
+
+</form>
+</main>
+
+<footer>
+  <b>Lucas Lima</b> · Personal Trainer em Monção<br>
+  Os seus dados são usados só pra montar e acompanhar o seu treino.
+</footer>
+
+<script>
+const WHATSAPP = "351960259288";
+const form = document.getElementById('ficha');
+
+/* Barra de progresso */
+function atualizarProgresso(){
+  const campos = form.querySelectorAll('[data-q] input, [data-q] select, [data-q] textarea, input[data-q], select[data-q], textarea[data-q]');
+  // contar por "pergunta": pega elementos com data-q diretos + grupos
+  let total = 0, ok = 0;
+  // diretos
+  form.querySelectorAll('input[data-q],select[data-q],textarea[data-q]').forEach(el=>{
+    total++; if(el.value.trim()) ok++;
+  });
+  // grupos de pílulas
+  form.querySelectorAll('.pilulas[data-q]').forEach(g=>{
+    total++; if(g.querySelector('input:checked')) ok++;
+  });
+  const pct = total? Math.round(ok/total*100):0;
+  document.getElementById('barra').style.width = pct+'%';
+  document.getElementById('pct').textContent = pct+'%';
+}
+form.addEventListener('input', atualizarProgresso);
+atualizarProgresso();
+
+/* Validação de obrigatórios */
+function validar(){
+  let valido = true;
+  const obrig = ['nome','tel','objetivo','assina'];
+  obrig.forEach(id=>{
+    const el = document.getElementById(id);
+    const campo = el.closest('.campo');
+    if(!el.value.trim()){ campo.classList.add('invalido'); valido=false; }
+    else campo.classList.remove('invalido');
+  });
+  // cláusulas do combinado (obrigatórias, menos o uso de imagem)
+  const faltou = ['t1','t2','t3','t4'].some(id=>!document.getElementById(id).checked);
+  if(faltou){
+    valido = false;
+    alert('Pra começar, marque os 4 pontos do nosso combinado no passo 4.');
+  }
+  return valido;
+}
+
+/* Coletar respostas */
+function coletar(){
+  let linhas = [];
+  linhas.push('*FICHA DE INÍCIO · TREINO PRESENCIAL*');
+  linhas.push('');
+
+  const secoes = form.querySelectorAll('section.bloco');
+  const titulos = ['1) QUEM É VOCÊ','2) SAÚDE','3) OBJETIVO E ROTINA','4) COMBINADO','5) APP DE TREINO','6) FOTOS DE AVALIAÇÃO'];
+
+  secoes.forEach((sec, i)=>{
+    let parte = [];
+    sec.querySelectorAll('.cf-row[data-q]').forEach(r=>{
+      parte.push(`${r.dataset.q}: ${r.querySelector('b').textContent}`);
+    });
+    sec.querySelectorAll('input[data-q],select[data-q],textarea[data-q]').forEach(el=>{
+      if(el.type==='checkbox' && el.dataset.q){ // termo opcional imagem
+        parte.push(`${el.dataset.q}: ${el.checked?'Sim':'Não'}`);
+        return;
+      }
+      if(el.value.trim()) parte.push(`${el.dataset.q}: ${el.value.trim()}`);
+    });
+    sec.querySelectorAll('.pilulas[data-q]').forEach(g=>{
+      const marc = [...g.querySelectorAll('input:checked')].map(x=>x.value);
+      if(marc.length) parte.push(`${g.dataset.q}: ${marc.join(', ')}`);
+    });
+    if(parte.length){
+      linhas.push(`*${titulos[i]}*`);
+      linhas = linhas.concat(parte);
+      linhas.push('');
+    }
+  });
+
+  const aceites = [...form.querySelectorAll('[data-termo]')]
+    .map(c=>`${c.dataset.termo} ${c.checked?'OK':'NÃO'}`).join(' · ');
+  linhas.push(`*ACEITE DO COMBINADO:* ${aceites}`);
+
+  return linhas.join('\n');
+}
+
+/* Envio */
+form.addEventListener('submit', e=>{
+  e.preventDefault();
+  if(!validar()){
+    const primeiro = form.querySelector('.campo.invalido');
+    if(primeiro) primeiro.scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  if(typeof fbq==='function'){ fbq('track','Lead',{content_name:'Ficha início presencial'}); }
+  const texto = encodeURIComponent(coletar());
+  window.location.href = `https://wa.me/${WHATSAPP}?text=${texto}`;
+});
+
+/* Copiar texto, com fallback pra celulares sem clipboard API */
+function copiarTexto(txt){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(txt).catch(()=>copiaFallback(txt));
+  }
+  return Promise.resolve(copiaFallback(txt));
+}
+function copiaFallback(txt){
+  const ta=document.createElement('textarea');
+  ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.focus();ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  document.body.removeChild(ta);
+}
+function feedbackBotao(btn, ok, base, ms){
+  btn.textContent=ok;btn.classList.add('copiado','ok');
+  setTimeout(()=>{btn.textContent=base;btn.classList.remove('copiado','ok')},ms);
+}
+
+/* Copiar MB Way */
+document.getElementById('copiar').addEventListener('click', function(){
+  const btn=this;
+  copiarTexto(document.getElementById('mbnum').textContent.replace(/\s/g,''))
+    .then(()=>feedbackBotao(btn,'Copiado','Copiar',1800));
+});
+
+/* Guardar combinado */
+document.getElementById('guardar-combinado').addEventListener('click', function(){
+  const btn=this;
+  const rows = [...document.querySelectorAll('.cf-row[data-q]')]
+    .map(r=>`${r.dataset.q}: ${r.querySelector('b').textContent}`).join('\n');
+  const txt =
+`MEU COMBINADO · Treino com Lucas Lima
+
+${rows}
+
+Pagamento: MB Way ${document.getElementById('mbnum').textContent} (Lucas Lima)
+Pra desmarcar sem perder o treino: avisar com no mínimo 24h de antecedência
+Atraso: tolerância de 15 minutos
+
+Lucas Lima · Personal Trainer · 960 259 288`;
+  copiarTexto(txt).then(()=>feedbackBotao(btn,'Copiado, agora é só colar nas suas notas','Guardar o meu combinado',2800));
+});
+
+/* Imprimir */
+document.getElementById('imprimir').addEventListener('click', ()=>window.print());
+</script>
+</body>
+</html>
